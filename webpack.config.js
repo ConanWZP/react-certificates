@@ -22,8 +22,12 @@ module.exports = {
                 use: ["babel-loader"],
             },
             {
+                test: /\.jpe?g$|\.gif$|\.png$|\.ico$|\.svg$/,
+                use: ['file-loader']
+            },
+            /*{
                 test: /\.s(a|c)ss$/,
-                exclude: /node_modules/,
+                exclude: /\.module.\.s(a|c)ss$/,
                 use: [
                     production ? MiniCssExtractPlugin.loader : 'style-loader',
                     {
@@ -40,8 +44,55 @@ module.exports = {
                         }
                     }
                 ]
+            },*/
+            // loading css
+            {
+                test: /\.css$/,
+                use: ['style-loader', 'css-loader', 'sass-loader'],
+                exclude: /\.module\.css$/
             },
-        ]
+            // loading scss/sass
+            {
+                test: /\.s[ac]ss$/,
+                use: ['sass-loader'],
+                exclude: /\.module\.scss$/
+            },
+            // CSS modules
+
+            {
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    {
+                        loader: "css-loader",
+                        options: {
+                            modules: {
+                                auto: true,
+                                localIdentName: "[local]_[hash:base64:5]"
+                            }
+                        }
+                    }
+                ],
+                include: /\.module\.css$/,
+            },
+            // SCSS modules
+            {
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    {
+                        loader: "css-loader",
+                        options: {
+                            modules: {
+                                auto: true,
+                                localIdentName: "[local]_[hash:base64:5]"
+                            }
+                        }
+                    },
+                    "sass-loader"
+                ],
+                include: /\.module\.scss$/,
+            }
+        ],
+
     },
     resolve: {
         extensions: ["*", ".js", ".jsx", ".scss"],
