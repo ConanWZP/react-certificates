@@ -1,0 +1,147 @@
+.wrapper {
+  padding-top: 50px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  h2 {
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 24px;
+    text-align: center;
+    text-wrap: normal;
+    @media (max-width: 600px) {
+      font-size: 28px;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+}
+
+.select {
+  width: 400px;
+  position: relative;
+  font-size: 20px;
+  @media (max-width: 600px) {
+    width: 300px;
+    font-size: 16px;
+  }
+}
+
+.selectButton {
+  position: relative;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #eeeeee;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.2);
+}
+
+.selectRightSide {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  .divider {
+    color: #6e6e6e;
+  }
+}
+
+.options {
+  border-radius: 5px;
+  position: absolute;
+  top: 110%;
+  left: 0;
+  padding: 3px 0;
+  background-color: #eeeeee;
+  box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.2);
+  width: 100%;
+}
+
+.option {
+  cursor: pointer;
+  padding: 10px;
+  &:hover {
+    background-color: rgba(110, 110, 110, 0.11);
+  }
+}
+
+.absText {
+  position: absolute;
+}
+
+.selectInput {
+  width: 100%;
+
+
+  input {
+    font-size: 20px;
+    width: 100%;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    caret-color: transparent;
+    background-color: transparent;
+    @media (max-width: 600px) {
+      font-size: 16px;
+    }
+  }
+}
+
+.selectInputMod {
+
+  input {
+    caret-color: black;
+  }
+}
+
+.homeBottom {
+  position: fixed;
+  bottom: 55px;
+  text-align: center;
+  font-size: 32px;
+  @media (max-width: 600px) {
+    font-size: 24px;
+  }
+
+  a {
+
+    background-color: #eeeeee;
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.25);
+    padding: 15px 80px;
+    border-radius: 10px;
+   // transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background-color: black;
+      color: white;
+    }
+    &:active {
+      box-shadow: -4px 2px 4px 1px rgba(0, 0, 0, 0.6);
+    }
+  }
+}
+
+.price {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 20px;
+
+  span:last-child {
+    font-weight: 700;
+  }
+
+
+
+}

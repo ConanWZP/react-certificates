@@ -1,0 +1,128 @@
+.wrapper {
+  padding-top: 50px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form {
+  width: 50vw;
+  margin-bottom: 30px;
+  padding: 20px 10px;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+ // align-items: center;
+  gap: 15px;
+  @media (max-width: 1000px) {
+    width: 90vw;
+  }
+
+  a {
+    margin: 0 auto;
+    width: fit-content;
+    font-size: 18px;
+    color: #6363f1;
+  }
+}
+
+.title {
+ // margin-bottom: 10px;
+  text-align: center;
+  font-size: 24px;
+  @media (max-width: 600px) {
+    font-size: 20px;
+  }
+}
+
+.inputWrapper {
+
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 20px;
+  @media (max-width: 600px) {
+    font-size: 16px;
+  }
+
+  input, textarea {
+    border: 1px solid gray;
+    padding: 8px 14px;
+    font-size: 20px;
+    width: 100%;
+    outline: none;
+    border-radius: 10px;
+    background-color: white;
+    resize: none;
+    @media (max-width: 600px) {
+      font-size: 16px;
+    }
+  }
+}
+
+.inputTitle {
+
+}
+
+.inputTitleError {
+  color: #D90000;
+}
+
+.inputError {
+  border: 1px solid #D90000 !important;
+}
+
+.buttons {
+
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  @media (max-width: 600px) {
+    gap: 10px;
+  }
+
+  a, button {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: black;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    background-color: white;
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.25);
+    padding: 15px 80px;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    @media (max-width: 600px) {
+     padding: 5px 10px;
+      width: 130px;
+    }
+
+    &:hover {
+      background-color: black;
+      color: white;
+    }
+    &:active {
+      box-shadow: -4px 2px 4px 1px rgba(0, 0, 0, 0.6);
+    }
+  }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: #0C1014;;
+  -webkit-box-shadow: transparent;
+  transition: background-color 5000s ease-in-out 0s;
+}

@@ -1,0 +1,41 @@
+.wrapper {
+  margin: auto auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container {
+  padding: 50px;
+  text-align: center;
+  font-size: 24px;
+  border-radius: 10px;
+
+  div {
+    margin-bottom: 40px;
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+    background-color: #eeeeee;
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.25);
+    padding: 15px 60px;
+    border-radius: 10px;
+    // transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    @media (max-width: 600px) {
+      //  padding: 8px 30px;
+      padding: 5px 10px;
+      width: 130px;
+    }
+    &:hover {
+      background-color: black;
+      color: white;
+    }
+    &:active {
+      box-shadow: -4px 2px 4px 1px rgba(0, 0, 0, 0.6);
+    }
+  }
+}
