@@ -28,7 +28,6 @@ const App = () => {
     const getData = async () => {
         setIsLoading(true)
         const response = await axios.get(`https://sycret.ru/service/api/api?MethodName=OSGetGoodList&ismob=0&ApiKey=011ba11bdcad4fa396660c2ec447ef14`)
-        console.log(response.data)
         setData(response.data.data)
         setFilteredData(response.data.data)
         setIsLoading(false)
