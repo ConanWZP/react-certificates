@@ -16,7 +16,6 @@
   box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
- // align-items: center;
   gap: 15px;
   @media (max-width: 1000px) {
     width: 90vw;
@@ -31,7 +30,6 @@
 }
 
 .title {
- // margin-bottom: 10px;
   text-align: center;
   font-size: 24px;
   @media (max-width: 600px) {

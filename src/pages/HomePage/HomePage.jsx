@@ -33,9 +33,7 @@ const HomePage = ({data, chosenOption, setChosenOption, isLoading, setFilteredDa
             <h2>Сделайте хороший подарок</h2>
             <div className={styles.select} onBlur={(e) => {
                 const currentTarget = e.currentTarget;
-                // Give browser time to focus the next element
                 requestAnimationFrame(() => {
-                    // Check if the new focused element is a child of the original container
                     if (!currentTarget.contains(document.activeElement)) {
                         setOptionsIsShowed(false);
                     }
@@ -52,7 +50,6 @@ const HomePage = ({data, chosenOption, setChosenOption, isLoading, setFilteredDa
                             </div>
                             : null
                     }
-                    {/*Выберите товар*/}
                     <div className={`${styles.selectInput} ${inputValue.length > 0 && styles.selectInputMod}`}>
                         <input ref={inputRef} value={inputValue} onChange={(e) => {
                             setOptionsIsShowed(true)

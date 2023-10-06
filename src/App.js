@@ -1,12 +1,8 @@
 import React, {useEffect, useState} from 'react';
-import styles from './styles.module.scss'
-import MyInput from "./components/MyInput";
-import like from './assets/ThumbUpAlt.svg'
-import {BrowserRouter, Navigate, Route, Routes, useLocation, useNavigate} from "react-router-dom";
+import {BrowserRouter, Navigate, Route, Routes} from "react-router-dom";
 import HomePage from "./pages/HomePage/HomePage";
 import FormPage from "./pages/FormPage/FormPage";
 import PaymentPage from "./pages/PaymentPage/PaymentPage";
-import Loader from "./components/Loader/Loader";
 import axios from "axios";
 import Layout from "./layout/Layout";
 
